@@ -5,21 +5,20 @@ function Leaderboard({ leaderboard }) {
     const [currentPage, setCurrentPage] = useState(1);
     const usersPerPage = 10; 
 
- 
+    // Calculate pagination indices for current page
     const indexOfLastUser = currentPage * usersPerPage;
     const indexOfFirstUser = indexOfLastUser - usersPerPage;
     const currentUsers = leaderboard.slice(indexOfFirstUser, indexOfLastUser);
 
-    
+    // Calculate total pages needed
     const totalPages = Math.ceil(leaderboard.length / usersPerPage);
 
-   
+    // Pagination navigation
     const handleNext = () => {
         if (currentPage < totalPages) {
             setCurrentPage(currentPage + 1);
         }
     };
-
     const handlePrev = () => {
         if (currentPage > 1) {
             setCurrentPage(currentPage - 1);
@@ -48,7 +47,7 @@ function Leaderboard({ leaderboard }) {
                 </tbody>
             </table>
 
-            
+            {/* Pagination controls */}
             {totalPages > 1 && (
                 <div className="pagination">
                     <button onClick={handlePrev} disabled={currentPage === 1}>

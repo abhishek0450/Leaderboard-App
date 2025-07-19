@@ -15,7 +15,7 @@ function App() {
     const [newUserName, setNewUserName] = useState('');
     const [claimedPoints, setClaimedPoints] = useState(null);
     const [claimedUserName, setClaimedUserName] = useState('');
-
+    
     const fetchUsers = useCallback(async () => {
         const res = await axios.get(`${API_URL}/users`);
         setUsers(res.data);
