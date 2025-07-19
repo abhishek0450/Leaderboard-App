@@ -6,7 +6,7 @@ import UserControls from './components/UserControls';
 import Notification from './components/Notification';
 import LeaderboardDisplay from './components/LeaderboardDisplay';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = import.meta.env.VITE_API_URL;
 
 function App() {
     const [users, setUsers] = useState([]);
