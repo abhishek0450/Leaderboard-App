@@ -89,3 +89,7 @@ Response: {
   "user": { ... }
 }
 ```
+
+## Screenshot
+
+<img width="1038" height="584" alt="Screenshot 2025-07-19 232040" src="https://github.com/user-attachments/assets/5e312910-9304-4c53-981b-0b56e7959b24" />
